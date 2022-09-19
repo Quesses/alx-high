@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 number = 3.14159
 
-f"{:.2number}"
+print(f"{:.2number}")
