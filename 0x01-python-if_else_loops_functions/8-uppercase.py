@@ -4,4 +4,4 @@ def uppercase(str):
         if (ord(x) >= 97) and (ord(x) <= 123):
             x = chr(ord(x) - 32)
         print(f"{x}", end="")
-    print(sep=" ")
+    print("")
