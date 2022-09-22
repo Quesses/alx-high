@@ -9,16 +9,15 @@ if __name__ == "__main__":
     if arg_check < 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    match operator:
-        case '+':
-            result = calculator_1.add(a, b)
-        case '-':
-            result = calculator_1.sub(a, b)
-        case '*':
-            result = calculator_1.mul(a, b)
-        case '/':
-            result = calculator_1.add(a, b)
-        case other:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+    elif operator == '+':
+        result = calculator_1.add(a, b)
+    elif operator == '-':
+        result = calculator_1.sub(a, b)
+    elif operator == '*':
+        result = calculator_1.mul(a, b)
+    elif operator == '/':
+        result = calculator_1.add(a, b)
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
     print(f"{a} {operator} {b} = {result}")
