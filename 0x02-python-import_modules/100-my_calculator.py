@@ -17,7 +17,7 @@ if __name__ == "__main__":
     elif operator == '*':
         result = calculator_1.mul(a, b)
     elif operator == '/':
-        result = calculator_1.add(a, b)
+        result = calculator_1.div(a, b)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
