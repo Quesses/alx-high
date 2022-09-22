@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-f'#pythoniscool'
+print(f'#pythoniscool')
