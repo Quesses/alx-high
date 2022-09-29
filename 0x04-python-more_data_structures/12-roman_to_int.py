@@ -24,8 +24,7 @@ def roman_to_int(roman_string):
 
     for x in range(len(roman_string)):
         if roman_string[x] in "IVXLCDM":
-            if x != str_l and add_fig(roman_string[x]) 
-            < add_fig(roman_string[x + 1]):
+            if x != str_l and add_fig(roman_string[x]) < add_fig(roman_string[x + 1]):
                 roman_fig += add_fig(roman_string[x]) * -1
             else:
                 roman_fig += add_fig(roman_string[x])
