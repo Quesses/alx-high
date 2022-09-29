@@ -18,14 +18,15 @@ def add_fig(roman_fig=""):
 
 def roman_to_int(roman_string):
     if (roman_string is None or not isinstance(roman_string, str)):
-        return None
+        return 0
     roman_fig = 0
-    str_len = len(roman_string)
+    str_l = len(roman_string) - 1
 
     for x in range(len(roman_string)):
         if roman_string[x] in "IVXLCDM":
-            if (x != len(roman_string) - 1) and add_fig(roman_string[x]) < add_fig(roman_string[x + 1]):
-                roman_fig += add_fig(roman_string[x]) - 2
+            if x != str_l and add_fig(roman_string[x]) 
+            < add_fig(roman_string[x + 1]):
+                roman_fig += add_fig(roman_string[x]) * -1
             else:
                 roman_fig += add_fig(roman_string[x])
     return roman_fig
