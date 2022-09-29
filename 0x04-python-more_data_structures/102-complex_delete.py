@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def complex_delete(a_dictionary, value):
-    if a_dictionary is None or a_dictionary = {}:
+    if a_dictionary is None or a_dictionary == {}:
         return None
     keys = list(a_dictionary)
     for x in keys:
