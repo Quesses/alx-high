@@ -1,10 +1,10 @@
 #!/usr/bin/phyton3
-"""A Square class to practice class and docstring style coding."""
+"""Square class, learning classes and docstring style coding."""
 
 
 class Square:
     """
-    An empty class that defines a square.
+    Defines an empty Square.
     """
 
     pass
