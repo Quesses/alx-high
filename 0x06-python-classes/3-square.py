@@ -8,7 +8,9 @@ class Square:
     def __init__(self, size=0):
         """
         Initialize the square with a size (private instantiation)
-        No type / value verification
+        Either default size 0 or specified size
+
+        :param size: integer value > 0.
         """
 
         if type(size) is not int:
@@ -18,9 +20,11 @@ class Square:
         
         self.__size = size
 
-        def area(self):
-            """ Calculates the area of the square
+    def area(self):
+        """ Calculates the area of the square
 
-            returns: area calculated. """
+        :return: area calculated. """
 
-            return self.__size ** 2
+        self.area = self.__size ** 2
+
+        return self.area
