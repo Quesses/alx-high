@@ -3,10 +3,9 @@
 
 
 class Square:
-    """ Defines a Square by another class Square
+    """
+    Defines a Square by another class Square
 
-    >>> square_1 = Square()
-    >>> square_2 = Square(7)
     """
 
     def __init__(self, size=0):
@@ -17,9 +16,8 @@ class Square:
         :param size: integer value > 0.
         """
 
+        self.__size = size
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("sixe must be >= 0")
-        
-        self.__size = size
