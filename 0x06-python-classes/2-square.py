@@ -7,10 +7,10 @@ class Square:
 
     def __init__(self, size=0):
         """
-        Initialize the square with a size (private instantiation)
-        No type / value verification
+        Initialize the square with a size
+        size is specified otherwise default size 0 is used
 
-        param size: integer value > 0.
+        :param size: integer value > 0.
         """
 
         self.__size = size
