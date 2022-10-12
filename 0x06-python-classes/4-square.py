@@ -21,6 +21,26 @@ class Square:
         
         self.__size = size
 
+    @classmethod
+    def size(self):
+        """ returs the size of square
+
+        Returns:
+            size of square
+        """
+
+        return self.__size
+
+    @classmethod
+    def size(self, value):
+        """ Setter, sets the size of square
+
+        Args:
+            value (int): size of square
+        """
+
+        self.__size = value
+
     def area(self):
         """ Calculates the area of the square
 
