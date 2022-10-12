@@ -11,8 +11,16 @@ class Square:
         No type / value verification
         """
 
-        self.__size = size
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("sixe must be >= 0")
+        
+        self.__size = size
+
+        def area(self):
+            """ Calculates the area of the square
+
+            returns: area calculated. """
+
+            return self.__size ** 2
