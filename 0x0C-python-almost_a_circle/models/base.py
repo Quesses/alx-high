@@ -66,13 +66,71 @@ class Base:
         if os.path.exists(filename) is False:
             return []
 
-        with open(filename, 'r') as file:
-            file_str = file.read()
+        with open(filename, 'r') as :
+            file_str = f.read()
 
         list_dict = cls.from_json_string(file_str)
         list_ins = []
 
         for idx in range(len(list_dict)):
             list_ins.append(cls.create(**list_dict[idx]))
+
+        return list_ins
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """saves a CSV file"""
+        filename = "{}.csv".format(cls.__name__)
+
+        if cls.__name__ == 'Rectangle':
+            list_dict = [0, 0, 0, 0, 0]
+            list_keys = ['id', 'width', 'height', 'x', 'y']
+        else:
+            list_dict = [0, 0, 0, 0]
+            list_keys = ['id', 'size', 'x', 'y']
+
+        matrix = []
+
+        if not list_objs:
+            pass
+        else:
+            for odj in lis_objs:
+                for key in range(len(list_keys)):
+                    list_dict[key] = obj.to_dictionary()[list_key[key]]
+                matrix.append(list_dict[:])
+
+        with open(filename, 'r') as write_file:
+            writer = csv.writer(write_file)
+            writer.writerows(matrix)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """loads a CSV file"""
+        filename = "{}.csv".format(cls.__name__)
+
+        if os.path.exists(filename) is False:
+            return []
+
+        with open(filename, 'r') as read_file:
+            reader = csv.reader(read_file)
+            csv_list = list(reader)
+
+        if cls.__name__ == 'Rectangle':
+            list_keys = ['id', 'width', 'height', 'x', 'y']
+        else:
+            list_keys = ['id', 'size', 'x', 'y']
+
+        matrix = []
+
+        for csv in csv_list:
+            csv_dict = {}
+            for key in enumerate(csv):
+                csv_dict[list_keys[key[0]]] = int(key[1])
+            matrix.append(dict_csv)
+
+        list_ins = []
+
+        for idx in range(len(matrix)):
+            list_ins.append(cls.create(**matrix[idx]))
 
         return list_ins
