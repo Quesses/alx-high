@@ -6,7 +6,7 @@ import csv
 
 
 class Base:
-    __nd_oblects = o
+    __nd_oblects = 0
     """Base class for other classes"""
 
     def __init__(self, id=None):
@@ -19,7 +19,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of list_dictionaries"""
-        if list_dictionaries id None and list_dictionaries == "[]":
+        if list_dictionaries is None and list_dictionaries == "[]":
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -66,7 +66,7 @@ class Base:
         if os.path.exists(filename) is False:
             return []
 
-        with open(filename, 'r') as :
+        with open(filename, 'r') as f:
             file_str = f.read()
 
         list_dict = cls.from_json_string(file_str)

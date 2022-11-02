@@ -28,7 +28,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """width setter"""
-        if type(value) not int:
+        if type(value) is not int:
             raise TypeError('width must be an integer')
         if value <= 0:
             raise ValueError('width must be > 0')
@@ -118,7 +118,7 @@ class Rectangle(Base):
         """assigns an argument to each attribute
         either no-keyword arguments or key-worded arguments
         """
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             list_atr = ['id', 'width', 'height', 'x', 'y']
             for atr in range(len(args)):
                 setattr(self, list_atr[atr], args[atr])

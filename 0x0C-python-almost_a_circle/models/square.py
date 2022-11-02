@@ -4,7 +4,7 @@
 from models.rectangle import Rectangle
 
 
-class Square(rectangle):
+class Square(Rectangle):
     """class Square defines a square
     inherits from class Rectangle
     """
@@ -38,7 +38,7 @@ class Square(rectangle):
         """assigns an argument to each attribute
         either no-keyword arguments or key-worded arguments
         """
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             list_atr = ['id', 'size', 'x', 'y']
             for atr in range(len(args)):
                 if list_atr[atr] == 'size':
