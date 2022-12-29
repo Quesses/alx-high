@@ -3,10 +3,10 @@ const arg1 = process.argv[2];
 if (isNaN(arg1) || arg1 === undefined) {
   console.log('MIssing size');
 } else {
-  let x = Number(arg1);
-  const y = x;
-  while (x > 0) {
-    console.log('X'.repeat(y));
-    x--;
+  const x = Number(arg1);
+  let y = 0;
+  while (y < x) {
+    console.log('X'.repeat(x));
+    y++;
   }
 }
