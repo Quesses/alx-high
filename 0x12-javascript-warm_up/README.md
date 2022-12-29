@@ -1,3 +1,5 @@
+[![js-semistandard-style](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)](https://github.com/standard/semistandard)
+
 #JavaScript -  Warmup
 =====================
 JavaScript is a high level Language that has multitude of functions and uses, it adds functionality to your web page (frontend) and is also used for scripting mong other things.
